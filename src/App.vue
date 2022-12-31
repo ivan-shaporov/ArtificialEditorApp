@@ -1,5 +1,5 @@
 <template>
-  <div>Hello {{ value }}</div>
+  <div>Hello {{ message }}</div>
 </template>
 
 <script>
@@ -7,8 +7,12 @@ export default {
   name: "App",
   data() {
     return {
-      value: "World"
+      message: "default"
     };
+  },
+  async mounted() {
+    //const { text } = await (await fetch("/api/RewriteEmail")).json();
+    //this.message = "text";
   }
 };
 </script>
