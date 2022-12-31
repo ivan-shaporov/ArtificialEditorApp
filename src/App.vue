@@ -11,7 +11,8 @@ export default {
     };
   },
   async mounted() {
-    const { text } = await (await fetch("/api/RewriteEmail"));//.json();
+    //const { text } = await (await fetch("/api/RewriteEmail")).json();
+    const text = await (await fetch("/api/RewriteEmail")).body;
     this.message = text;
   }
 };
